@@ -12,6 +12,7 @@
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
+  <script src="js/map.js"></script>
 </head>
 <body>
   <div class="landing" id="landing">
@@ -104,11 +105,31 @@
     <div class="layer">
       <div class="img-container">
         <h2>Service Times</h2>
-        <div class="info-block" id="worship-block">
-
-        </div>
-        <div class="info-block" id="bible-study-block">
-
+        <div class="two-block-container">
+          <div class="info-block" id="worship-block">
+            <h3>Worship</h3>
+            <p>
+              Sundays
+            </p>
+            <p>
+              9:00AM
+            </p>
+            <p>
+              11:00AM
+            </p>
+          </div>
+          <div class="info-block" id="bible-study-block">
+            <h3>Bible Study</h3>
+            <p>
+              Sunday School - 10:00AM
+            </p>
+            <p>
+              Wednesday - 7:00PM
+            </p>
+            <p>
+              Sunday Evening - 7:00PM
+            </p>
+          </div>
         </div>
 
         <div>
@@ -123,6 +144,52 @@
   <div class="color-back" id="staff">
     <div class="color-container">
       <h2>Staff</h2>
+      <div class="staff-container">
+        <div class="staff-block">
+          <div class="staff-photo">
+            <img src="img/staff1.png" />
+          </div>
+          <div class="staff-bio">
+            <h3>Aragorn</h3>
+            <p>
+              Elen sila lumenn omentilmo, Nae saian luume'. Cormamin lindua ele lle. Saesa omentien lle, vanya sulie Namaarie. Aa' lasser en lle coia orn n' omenta gurtha. Aa' i'sul nora lanne'lle. Aa' menle nauva calen ar' ta hwesta e' ale'quenle. Cormamin niuve tenna' ta elea lle au'. Lissenen ar' maska'lalaith tenna' lye omentuva.
+            </p>
+          </div>
+        </div>
+        <div class="staff-block">
+          <div class="staff-photo">
+            <img src="img/staff2.png" />
+          </div>
+          <div class="staff-bio">
+            <h3>Galadriel</h3>
+            <p>
+              Elen sila lumenn omentilmo, Nae saian luume'. Cormamin lindua ele lle. Saesa omentien lle, vanya sulie Namaarie. Aa' lasser en lle coia orn n' omenta gurtha. Aa' i'sul nora lanne'lle. Aa' menle nauva calen ar' ta hwesta e' ale'quenle. Cormamin niuve tenna' ta elea lle au'. Lissenen ar' maska'lalaith tenna' lye omentuva.
+            </p>
+          </div>
+        </div>
+        <div class="staff-block">
+          <div class="staff-photo">
+            <img src="img/staff3.png" />
+          </div>
+          <div class="staff-bio">
+            <h3>Eye of Sauron</h3>
+            <p>
+              Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc., li tot Europa usa li sam vocabularium. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilit&aacute; de un nov lingua franca: on refusa continuar payar custosi traductores. It solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles.
+            </p>
+          </div>
+        </div>
+        <div class="staff-block">
+          <div class="staff-photo">
+            <img src="img/staff4.png" />
+          </div>
+          <div class="staff-bio">
+            <h3>Gandalf</h3>
+            <p>
+              Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc., li tot Europa usa li sam vocabularium. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilit&aacute; de un nov lingua franca: on refusa continuar payar custosi traductores. It solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles.
+            </p>
+          </div>
+        </div>
+      </div>
       <a class="top-cut" href="#landing">
         <p>Back to top</p>
       </a>
@@ -132,6 +199,13 @@
     <div class="layer">
       <div class="img-container">
         <h2>Location</h2>
+        <div id="map">
+
+        </div>
+        <script
+        async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8SDAGsD3OuhrQZ4KG8L1TJwcVFWxGqjA&callback=initMap"></script>
+        <p class="address">4202 Helen Road - Jeffersonville, Indiana</p>
         <a class="top-cut" href="#landing">
           <p>Back to top</p>
         </a>
@@ -190,5 +264,6 @@
     </div>
   </div>
   <script src="js/effects.js"></script>
+
 </body>
 </html>
