@@ -7,78 +7,83 @@
 BASE STYLING
 ****/
 .landing {
-  background-image: url("../img/cityscape.jpg");
+  background: url("../img/cityscape.jpg") no-repeat center center fixed;
   background-position: 0 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
+  min-height: 1000px;
   height: 100vh;
   display: block;
+  text-align: center;
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  width: 98vw;
-  max-width: 1400px;
-  margin: auto;
+    width: 100%;
 }
 
+
 #logo {
-  max-height: 100px;
+  height: 125px;
   padding: 20px;
+  margin: auto;
+  display: block;
 }
 
 .nav-line {
   display: block;
   height: 3px;
   width: 100%;
-  background-color: rgba(0,0,0,.1)
+  background-color: rgba(0,0,0,.4)
 }
 
 .navbar {
-  display: inline-block;
-  width: 70%;
-  max-width: 1000px;
-  padding-top: 55px;
+  display: block;
+  margin: 0 auto;
+  width: 85vw;
+  padding-top: 10px;
+  margin: 0 auto;
 }
 
 .menuButton {
-  display: inline-block;
-  width: 150px;
-  height: 100px;
-  background: rgba(255,255,255,.2);
-  margin: 20px;
+  display: block;
+  width: 90vw;
+  max-width: 300px;
+  height: 40px;
+  background: rgba(255,255,255,.7);
+  margin: 10px auto;
   text-align: center;
-  line-height: 100px;
+  line-height: 41px;
   cursor: pointer;
 }
 
 .nav-list {
   width: 100%;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   margin: .5em 0;
+  list-style: none;
+  text-align: center;
   margin-left: -40px;
 
 }
 
 
 .nav-item {
-  display: inline-block;
-  width: 18%;
-  padding: 10px 0;
-  margin: 0 auto;
-  text-align: center;
+  background-color: #e8f1f2;
+  margin: 5px 0;
   color: rgba(0,0,0,.1);
+  width: 100%;
 }
 
 .nav-item a {
   color: rgba(0,0,0,.5);
+  font-size: 20px;
   font-family: 'Roboto', sans-serif;
-  font-size: 110%;
-  padding: 20px;
+  padding: 10px 0;
+  width: 100%;
+  display: inline-block;
+  white-space: nowrap;
 }
 
 a {
@@ -90,12 +95,14 @@ body {
   background-color: #e8f1f2;
 }
 
+
+
 /*****
 Front Page
 *****/
 .welcome {
   text-align: center;
-  height:500px;
+  height:430px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,14 +111,14 @@ Front Page
 
 .welcomeText {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .headline {
-  font-size: 100px;
+  font-size: 60px;
   font-family: 'Roboto', sans-serif;
   color: #2f2e2e;
-  text-shadow: #f4f4f4 0 0 3px;
+  text-shadow: #f4f4f4 0 0 5px;
 }
 
 #jesus {
@@ -122,17 +129,34 @@ Front Page
   margin-right: 20px;
 }
 
-#newButton a {
-  font-size: 35px;
+.btn {
+  margin: 10px;
+  display: inline-block;
+}
+
+.btn a {
+  font-size: 20px;
+  min-width: 168px;
+  display: block;
   font-family: 'Roboto', sans-serif;
   background-color: rgba(255,157,0,.7);
-  padding: 20px 35px;
+  padding: 16px 28px;
   border: 2px solid white;
   text-shadow: #1c1b1b 1px 0 8px;
 }
 
+#nwsltrButton a {
+  background-color: #8be9fd;
+}
+
+#newButton {
+  margin-top: 30px;
+}
+
 .buttonDiv {
   margin-top: 38px;
+  margin-bottom: -44px;
+  width
 }
 
 /*****
@@ -147,18 +171,17 @@ Basic Section Styling
 
 
 .img-back {
-  display: block;
+  display: flex;
   background-position: 0 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  min-height: 800px;
-  max-height: 100vh;
   font-size: 35px;
   color: #e8f1f2;
   font-family: 'Roboto', sans-serif;
   position: relative;
   clear: both;
+  min-height: 100vh;
 }
 
 .color-back p {
@@ -176,6 +199,7 @@ Basic Section Styling
   position: absolute;
   width: 100%;
   height: 100%;
+  z-index: 2;
 }
 
 
@@ -183,36 +207,77 @@ Basic Section Styling
 /*****
 Content layout
 *****/
-.flex-row {
+
+
+.img-container {
+  width: 92vw;
+  min-height: 100%;
+  margin: 0 auto;
+  z-index: 3;
+  position: relative;
+}
+
+.color-container {
+  width: 92vw;
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+
+.text-blocks {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
   height: inherit;
   justify-content: space-between;
   overflow: auto;
 }
 
-.img-container {
-  width: 80vw;
-  min-height: 100%;
-  margin: 0 auto;
+#overlay {
+  background: rgba(0,0,0,.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
 }
 
-.color-container {
-  width: 80vw;
-  margin: 0 auto;
-  min-height: 100%;
+#subWindow {
+  display: inline-block;
+  width: 100%;
+  height: 400px;
+  background: #e8f1f2;
+  margin-top: 100px;
+  left: 50%;
+  margin-left: -50%;
+  position: fixed;
+  z-index: 11;
+
 }
 
+.nwsLabel {
 
+}
 
+.nwsInput {
 
+}
 
 /*****
 Beliefs
 *****/
 
+.content-block {
+  width: 85%;
+}
 
+.belief-block {
+
+}
 
 /*****
 Service Times
@@ -220,59 +285,63 @@ Service Times
 #services {
   background: url("../img/pews.jpeg");
   background-attachment: fixed;
-  min-height: 800px;
+  display: flex;
+  min-height: 100vh;
 }
 
-.content-block-2 {
-  width: 48.5%;
+.content-block {
+  width: 85%;
 }
 
 .top-cut {
   float:right;
+  margin: 30px 0 10px 0 ;
+}
+
+#services .img-container .top-cut {
+  align-self: flex-end;
 }
 
 .info-block {
-  height: 93%;
-  width: 46%;
+  width: 80%;
   border: 2px solid #e8f1f2;
   background: rgba(232,241,242,.4);
   color: #001a23;
   text-align: center;
+  min-height: 385px;
+}
+
+.info-block p:last-child {
+  padding-bottom: 30px;
 }
 
 .two-block-container {
   display: flex;
-  height: 474px;
-  padding-top: 1em;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .info-block h3 {
-  font-size: 60px;
+  font-size: 1.5em;
   flex-direction: column;
 }
 
 .info-block p {
-  font-size: .8em;
+  font-size: .6em;
   color: #001a23;
 }
 
 #worship-block {
+
 }
 
 #bible-study-block {
-
+  margin-top: 30px;
 }
 
-.img-container a.top-cut {
-  padding: 1em 0;
-}
 
-.clear {
-  clear: both;
-}
+
 
 /*****
 Staff
@@ -280,32 +349,46 @@ Staff
 
 .staff-container {
   margin-top: 100px;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+
 }
 .staff-block {
+  margin:auto;
   display: flex;
+  flex-direction: column;
+  align-content: center;
   justify-content: space-between;
-  width: inherit;
+  width:100%;
   margin-bottom: 75px;
 }
 
-.staff-block:nth-child(even) {
-  flex-direction: row-reverse;
-}
 
 .staff-photo {
-  width: 40%;
+  width:100%;
+  margin: 0 auto;
+}
+
+.staff-bio h3 {
   text-align: center;
 }
 
 .staff-bio {
-  width: 50%;
-  text-align: center;
+  width: 90%;
+  text-align: left;
+  margin:auto;
 }
 
 .staff-photo img {
-  margin: 0 auto;
-  width: 300px;
+  display: block;
+  margin: auto;
+  width:80%;
+  max-width: 300px;
+  min-width: 200px;
   border-radius: 15px;
+
 }
 
 
@@ -361,53 +444,263 @@ Footer
 }
 
 /****
+Newsletter sign up
+***/
+#subDiv {
+  display:none;
+}
+
+#subForm h2 {
+  margin-bottom: 40px;
+}
+
+.nwsInput {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.nwsLabel {
+  display: block;
+  width: 70%;
+  text-align: left;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+.closeX {
+  display: inline-block;
+  color: white;
+  background: black;
+  height: 23px;
+  width: 23px;
+}
+
+#nwsCloseX {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+}
+
+.nwsBtn {
+  width: 200px;
+  height: 60px;
+  color: #e8f1f2;
+  background: #7a9e7e;
+  border: 2px solid #001a23;
+}
+
+/****
 MEDIA QUERIES
 ***/
-/* @media screen and (min-width: 769px) {
-
-    header {
-      background-color: #fff;
-      background-repeat: no-repeat;
-      background-position: center;
-      margin: 0 auto;
-      background-size: cover;
-      min-height: 100vh;
-      max-width: 1200px;
-      min-width: 100vh;
-    }
-    header nav {
-      display: flex;
+@media screen and (min-width: 640px) {
+  .welcomeText{
+    flex-direction: row;
+    margin-top: 125px;
     }
 
-    #nav-logo {
-      display: inline-block;
-      max-width: 200px;
-
+    .welcome {
+      height: 650px;
     }
-
-    .navigation {
-      display: inline-block;
-      margin: 0 auto;
-      width: 100%;
-    }
-
 
     .nav-list {
-      display: flex;
-      max-width: 900px;
       flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
+      margin: 0 0 0 -65px;
     }
 
     .nav-item {
-      background-color: #fff;
-      max-width: 15%;
+      width: 15%;
+      padding: 10px 0;
+      color: rgba(0,0,0,.1);
+      background-color: transparent;
     }
 
+
     .nav-item a {
-      color: #001a23;
-      padding: 10px;
+      color: rgba(0,0,0,.5);
+      font-family: 'Roboto', sans-serif;
+      padding: 0 5px;
+      width: 110%;
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    header {
+      width: 98vw;
+      max-width: 3000px;
+      margin: auto;
+    }
+    .menuButton {
+      display: inline-block;
+      float:right;
+      width: 150px;
+      height: 100px;
+      background: rgba(255,255,255,.2);
+      margin: 20px;
+      text-align: center;
+      line-height: 100px;
+      cursor: pointer;
+    }
+
+    .navbar {
+      display: block;
+      width: 95vw;
+      position: absolute;
+      margin-top: 125px;
+      padding-left: 1.5vw;
+    }
+
+    .nav-line {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background-color: rgba(0,0,0,.1)
+    }
+    #logo {
+      max-height: 100px;
+      padding: 20px;
+      display: inline-block;
+      float: left;
+    }
+
+
+    .info-block h3 {
+      font-size: 1.5em;
+    }
+
+    .info-block p {
+      font-size: .75em;
+    }
+
+    #subWindow {
+      width: 500px;
+      height: 400px;
+      margin-left: -250px;
+    }
+
+    .closeX {
+      height: 23px;
+      width: 23px;
+      border-radius: 15px;
+      border: 2px solid white;
+    }
+
+    #nwsCloseX {
+      position: absolute;
+      top: -7px;
+      right: -7px;
+      cursor: pointer;
     }
 }
-*/
+
+
+@media screen and (min-width: 850px) {
+  .welcome {
+    height: 775px;
+  }
+
+  .headline {
+    font-size: 80px;
+    }
+
+  .btn a {
+    padding: 20px 35px;
+    font-size: 35px;
+  }
+
+  .text-blocks   {
+    flex-direction: row;
+    align-content: flex-start;
+  }
+  .content-block {
+    width: 48.5%;
+  }
+
+  .img-container, .color-container {
+    width: 80vw;
+  }
+
+  .two-block-container {
+
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom:50px;
+  }
+
+  #bible-study-block {
+    margin-top: 0;
+}
+  .info-block {
+    margin: 0px 30px;
+    min-height: 438px;
+  }
+
+  #services {
+
+  }
+
+  .staff-block {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .staff-block:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .staff-photo img {
+    display: inline;
+  }
+
+  .staff-bio {
+    width: 70%;
+    text-align: center;
+  }
+
+  .staff-block:nth-child(even) .staff-photo {
+    text-align: right;
+  }
+
+  .staff-bio h3 {
+    margin: 0 0 .5em 0;
+  }
+
+@media screen and (min-width: 1240px) {
+  .headline {
+    font-size: 100px;
+    }
+
+  .navbar {
+      width: calc(100% - 389px);
+      display: inline-block;
+      padding-top: 63px;
+      position: absolute;
+      padding-left: 0;
+      margin-top: 0;
+      left: 50%;
+      margin-left: calc(-1 *((100% - 389px) / 2));
+    }
+
+  .nav-item a {
+    font-size: 110%;
+  }
+
+  .nav-item {
+    width: 18%;
+  }
+
+  .landing {
+    min-height: 100vh;
+  }
+
+  .two-block-container {
+    margin-bottom:90px;
+  }
+
+  .staff-photo {
+    width: 40%;
+  }
+
+}
