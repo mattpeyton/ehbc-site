@@ -6,6 +6,19 @@
 /****
 BASE STYLING
 ****/
+a {
+  text-decoration: none;
+  color: #e8f1f2;
+}
+
+body {
+  background-color: #e8f1f2;
+}
+
+/****
+Landing Section
+****/
+
 .landing {
   background: url("../img/cityscape.jpg") no-repeat center center fixed;
   background-position: 0 0;
@@ -28,12 +41,9 @@ header {
   display: block;
 }
 
-.nav-line {
-  display: block;
-  height: 3px;
-  width: 100%;
-  background-color: rgba(0,0,0,.4)
-}
+/***
+Navigation bar
+***/
 
 .navbar {
   display: block;
@@ -42,6 +52,15 @@ header {
   padding-top: 10px;
   margin: 0 auto;
 }
+
+.nav-line {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: rgba(0,0,0,.4)
+}
+
+
 
 .menuButton {
   display: block;
@@ -86,14 +105,6 @@ header {
   white-space: nowrap;
 }
 
-a {
-  text-decoration: none;
-  color: #e8f1f2;
-}
-
-body {
-  background-color: #e8f1f2;
-}
 
 
 
@@ -194,7 +205,7 @@ Basic Section Styling
   color: #e8f1f2;
 }
 
-.layer {
+.layer /***shadow overlay for large background images***/{
   background-color: rgba(0, 26, 35, .6);
   position: absolute;
   width: 100%;
@@ -202,6 +213,15 @@ Basic Section Styling
   z-index: 2;
 }
 
+/****
+Align top of section to top of view window when clicking from Navbar anchors
+****/
+.color-back:before {
+  display: block;
+  content: " ";
+  height: 10px;
+  visibility: hidden;
+}
 
 
 /*****
@@ -234,38 +254,8 @@ Content layout
   overflow: auto;
 }
 
-#overlay {
-  background: rgba(0,0,0,.6);
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: none;
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  z-index: 10;
-}
 
-#subWindow {
-  display: inline-block;
-  width: 100%;
-  height: 400px;
-  background: #e8f1f2;
-  margin-top: 100px;
-  left: 50%;
-  margin-left: -50%;
-  position: fixed;
-  z-index: 11;
 
-}
-
-.nwsLabel {
-
-}
-
-.nwsInput {
-
-}
 
 /*****
 Beliefs
@@ -412,11 +402,6 @@ Location
   text-align: center;
 }
 
-/*****
-Member FAQ
-*****/
-
-
 
 /*****
 Footer
@@ -428,24 +413,46 @@ Footer
   position: relative;
   margin-top: -100px;
   clear: both;
+  text-align: center;
 }
 
 .footer p {
   padding-top: 2em;
-  margin: 0;
   font-family: 'Roboto', sans-serif;
 }
 
-.color-back:before {
-  display: block;
-  content: " ";
-  height: 10px;
-  visibility: hidden;
-}
+
+
 
 /****
-Newsletter sign up
+Newsletter sign up modal
 ***/
+
+#overlay {
+  background: rgba(0,0,0,.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+#subWindow {
+  display: inline-block;
+  width: 100%;
+  height: 400px;
+  background: #e8f1f2;
+  margin-top: 100px;
+  left: 50%;
+  margin-left: -50%;
+  position: fixed;
+  z-index: 11;
+
+}
+
 #subDiv {
   display:none;
 }
@@ -496,6 +503,78 @@ Newsletter sign up
 MEDIA QUERIES
 ***/
 @media screen and (min-width: 640px) {
+  /****
+  Landing/top section
+  ***/
+
+  header {
+    width: 98vw;
+    max-width: 3000px;
+    margin: auto;
+  }
+  .menuButton {
+    display: inline-block;
+    float:right;
+    width: 150px;
+    height: 100px;
+    background: rgba(255,255,255,.2);
+    margin: 20px;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+  }
+
+  #logo {
+    max-height: 100px;
+    padding: 20px;
+    display: inline-block;
+    float: left;
+  }
+  /****
+  Navigation
+  ***/
+
+  .navbar {
+    display: block;
+    width: 95vw;
+    position: absolute;
+    margin-top: 125px;
+    padding-left: 1.5vw;
+  }
+
+  .nav-line {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: rgba(0,0,0,.1)
+  }
+
+  .nav-list {
+    flex-direction: row;
+    margin: 0 0 0 -65px;
+  }
+
+  .nav-item {
+    width: 15%;
+    padding: 10px 0;
+    color: rgba(0,0,0,.1);
+    background-color: transparent;
+  }
+
+
+  .nav-item a {
+    color: rgba(0,0,0,.5);
+    font-family: 'Roboto', sans-serif;
+    padding: 0 5px;
+    width: 110%;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  /****
+  Welcome section Text
+  ***/
+
   .welcomeText{
     flex-direction: row;
     margin-top: 125px;
@@ -505,65 +584,9 @@ MEDIA QUERIES
       height: 650px;
     }
 
-    .nav-list {
-      flex-direction: row;
-      margin: 0 0 0 -65px;
-    }
-
-    .nav-item {
-      width: 15%;
-      padding: 10px 0;
-      color: rgba(0,0,0,.1);
-      background-color: transparent;
-    }
-
-
-    .nav-item a {
-      color: rgba(0,0,0,.5);
-      font-family: 'Roboto', sans-serif;
-      padding: 0 5px;
-      width: 110%;
-      white-space: nowrap;
-      text-align: center;
-    }
-
-    header {
-      width: 98vw;
-      max-width: 3000px;
-      margin: auto;
-    }
-    .menuButton {
-      display: inline-block;
-      float:right;
-      width: 150px;
-      height: 100px;
-      background: rgba(255,255,255,.2);
-      margin: 20px;
-      text-align: center;
-      line-height: 100px;
-      cursor: pointer;
-    }
-
-    .navbar {
-      display: block;
-      width: 95vw;
-      position: absolute;
-      margin-top: 125px;
-      padding-left: 1.5vw;
-    }
-
-    .nav-line {
-      display: block;
-      height: 3px;
-      width: 100%;
-      background-color: rgba(0,0,0,.1)
-    }
-    #logo {
-      max-height: 100px;
-      padding: 20px;
-      display: inline-block;
-      float: left;
-    }
+    /****
+    Layout
+    ***/
 
 
     .info-block h3 {
@@ -573,6 +596,10 @@ MEDIA QUERIES
     .info-block p {
       font-size: .75em;
     }
+
+    /****
+    Newsletter subscribe modal
+    ***/
 
     #subWindow {
       width: 500px;
@@ -597,6 +624,10 @@ MEDIA QUERIES
 
 
 @media screen and (min-width: 850px) {
+
+  /****
+  Welcome section Text
+  ***/
   .welcome {
     height: 775px;
   }
@@ -604,6 +635,10 @@ MEDIA QUERIES
   .headline {
     font-size: 80px;
     }
+
+  /****
+  Basic Styling
+  ***/
 
   .btn a {
     padding: 20px 35px;
@@ -629,6 +664,10 @@ MEDIA QUERIES
     margin-bottom:50px;
   }
 
+  /****
+  Service Times
+  ****/
+
   #bible-study-block {
     margin-top: 0;
 }
@@ -637,9 +676,9 @@ MEDIA QUERIES
     min-height: 438px;
   }
 
-  #services {
-
-  }
+  /****
+  Staff
+  ****/
 
   .staff-block {
     flex-direction: row;
@@ -667,20 +706,38 @@ MEDIA QUERIES
     margin: 0 0 .5em 0;
   }
 
+  /****
+  Footer
+  *****/
+  .footer {
+    text-align: left;
+  }
+
 @media screen and (min-width: 1240px) {
+  /****
+  Welcome section text
+  *****/
+  .landing {
+    min-height: 100vh;
+  }
+
   .headline {
     font-size: 100px;
     }
 
+    /****
+    Navigation
+    *****/
+
   .navbar {
-      width: calc(100% - 389px);
-      display: inline-block;
-      padding-top: 63px;
-      position: absolute;
-      padding-left: 0;
-      margin-top: 0;
-      left: 50%;
-      margin-left: calc(-1 *((100% - 389px) / 2));
+    width: calc(100% - 389px);
+    display: inline-block;
+    padding-top: 63px;
+    position: absolute;
+    padding-left: 0;
+    margin-top: 0;
+    left: 50%;
+    margin-left: calc(-1 *((100% - 389px) / 2));
     }
 
   .nav-item a {
@@ -691,13 +748,17 @@ MEDIA QUERIES
     width: 18%;
   }
 
-  .landing {
-    min-height: 100vh;
-  }
+  /****
+  Basic Styling
+  *****/
 
   .two-block-container {
     margin-bottom:90px;
   }
+
+  /****
+  Staff
+  *****/
 
   .staff-photo {
     width: 40%;

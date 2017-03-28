@@ -1,7 +1,5 @@
-// Navbar initial hide + show
- $(".navbar").hide();
-
- $(".menuButton").click(function() {
+// Navbar toggle hide and show
+ $(".menuButton").click(function(){
    $(".navbar").fadeToggle();
  });
 
