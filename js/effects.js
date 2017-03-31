@@ -71,7 +71,7 @@ $("#nwsltrButton").click(function(){
         $.parseJSON(data);
         if (data.properties.status = "pending") {
          $("#subForm").hide();
-          $("#subSuccess").show();
+         $("#subSuccess").show();
         } else if (data.properties.status = "subscribed") {
           $("#subForm").hide();
           $("#subSubbed").show();
@@ -79,7 +79,7 @@ $("#nwsltrButton").click(function(){
       },
       "json"
     );
-    console.log(data);
+    console.log(subData);
   });
  });
 
