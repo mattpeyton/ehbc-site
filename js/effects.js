@@ -53,7 +53,7 @@ $("#nwsltrButton").click(function(){
     $(".overlayContent").remove();
   });
 
-  //submit Info from form to Mailchimp
+  //submit Info from form to Mailchimp -- will only work on an active webpage
   $("#subForm").submit(function(evt){
     evt.preventDefault();
     var subData = {};
