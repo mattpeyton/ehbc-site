@@ -27,11 +27,11 @@
       <div class="navbar" style="display:none;">
         <div class="nav-line"></div>
         <ul class="nav-list">
-          <li class="nav-item"><a href="#beliefs">Beliefs</a></li>
-          <li class="nav-item"><a href="#services">Service Times</a></li>
-          <li class="nav-item"><a href="#staff">Staff</a></li>
-          <li class="nav-item"><a href="#location">Location</a></li>
-          <li class="nav-item"><a href="#members">Member FAQ</a></li>
+          <li class="nav-item" ><a href="#beliefs">Beliefs</a></li>
+          <li class="nav-item" ><a href="#services">Service Times</a></li>
+          <li class="nav-item" ><a href="#staff">Staff</a></li>
+          <li class="nav-item" ><a href="#location">Location</a></li>
+          <li class="nav-item" ><a href="#members">Member FAQ</a></li>
         </ul>
         <div class="nav-line"></div>
       </div>
@@ -224,37 +224,37 @@
       <h2>Member FAQ</h2>
       <div>
         <div>
-          <h3 class="FAQuestion">Question One?</h3>
+          <h4 class="FAQuestion">How do I do that one thing?</h4>
           <p class="FAnswer">
             Et harum quidem rerum facilis est et expedita distinctio. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
           </p>
         </div>
         <div>
-          <h3 class="FAQuestion">Question Two?</h3>
+          <h4 class="FAQuestion">What about the other thing?</h4>
           <p class="FAnswer">
             Et harum quidem rerum facilis est et expedita distinctio. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
           </p>
         </div>
         <div>
-          <h3 class="FAQuestion">Question Three?</h3>
+          <h4 class="FAQuestion">Can I do this?</h4>
           <p class="FAnswer">
             Et harum quidem rerum facilis est et expedita distinctio. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
           </p>
         </div>
         <div>
-          <h3 class="FAQuestion">Question Four?</h3>
+          <h4 class="FAQuestion">What does it mean that I have a question?</h4>
           <p class="FAnswer">
             Et harum quidem rerum facilis est et expedita distinctio. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
           </p>
         </div>
         <div>
-          <h3 class="FAQuestion">Question Five?</h3>
+          <h4 class="FAQuestion">What if I have another question?</h4>
           <p class="FAnswer">
             Et harum quidem rerum facilis est et expedita distinctio. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
           </p>
         </div>
         <div>
-          <h3 class="FAQuestion">Question Six?</h3>
+          <h4 class="FAQuestion">Do you have any questions for me?</h4>
           <p class="FAnswer">
             Et harum quidem rerum facilis est et expedita distinctio. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
           </p>
@@ -273,7 +273,7 @@
   </div>
   <!-- Newsletter subscribe form -->
     <div id="subDiv">
-      <form id="subForm">
+      <form method="post" action="https://usX.api.mailchimp.com/3.0/lists/5649261703/members/" id="subForm">
         <h2>Get our weekly newsletter!</h2>
         <label class="nwsLabel" for="nwsFNAME">First Name</label>
         <input class="nwsInput" type="text" placeholder="William" id="nwsFNAME">
@@ -284,6 +284,16 @@
         <button class="nwsBtn" type="submit" id="nwsSubmitBtn">Sign Up! </button>
       </form>
       <span class="closeX" id="nwsCloseX">&#10006;</span>
+      <div id="subSuccess">
+        <h3>Almost There!</h3>
+        <p>Check your email for a confirmation</p>
+      </div>
+      <div id="subSubbed">
+        <h3>You're Already Subscribed</h3>
+        <p>
+          It looks like we already have you in the system. Thanks for being a subscriber.
+        </p>
+      </div>
     </div>
   <script src="js/effects.js"></script>
 </body>

@@ -387,13 +387,14 @@ Member FAQ
 
 .FAQuestion {
   display: inline-block;
-  margin: .5em 0 .5em .25em;
+  font-size: .8em;
+  margin: .6em 0 .6em .25em;
 }
 
 .FAQuestion:hover {
   color: #7a9e7e;
-  font-size: 1.25em;
-  transition-delay: .1s;
+  font-size: .83em;
+  transition-duration: .25s;
   cursor: pointer;
 }
 .FAnswer {
@@ -520,6 +521,30 @@ Newsletter sign up modal
   border: 2px solid #001a23;
 }
 
+#subSuccess {
+  display: none;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+#subSubbed {
+  display: none;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.newVid {
+  max-width: 560px;
+  max-height: 315px;
+  width: 95%;
+  height: 100%;
+  margin-top: 100px;
+
+}
+
 /****
 MEDIA QUERIES
 ***/
@@ -640,6 +665,24 @@ MEDIA QUERIES
       top: -7px;
       right: -7px;
       cursor: pointer;
+    }
+    /****
+    New Video
+    ***/
+    .newVid {
+      margin: 100px auto;
+      max-width: 560px;
+      max-height: 315px;
+    }
+    /****
+    Member FAQ
+    ***/
+    .FAQuestion {
+      font-size: 1em;
+    }
+
+    .FAQuestion:hover {
+      font-size: 1.03em;
     }
 }
 
@@ -786,7 +829,7 @@ MEDIA QUERIES
   }
 
   .newVid {
-    margin: 100px auto;
+    margin: 200px auto;
   }
 
 }
