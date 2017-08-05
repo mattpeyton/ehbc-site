@@ -1,4 +1,4 @@
-* {
+html, body {
   margin: 0;
   padding: 0;
 }
@@ -20,23 +20,37 @@ Landing Section
 ****/
 
 .landing {
-  background: url("../img/cityscape.jpg") no-repeat center center fixed;
   background-position: 0 0;
   background-size: cover;
   min-height: 1000px;
   height: 100vh;
-  display: block;
+  z-index: 100;
   text-align: center;
+}
+
+.landing-image {
+  display: block;
+  float:left;
+  clear: both;
+  min-height: 1000px;
+  width: 100vw;
+  height: 100vh;
+  background: url("../img/churchwide.jpg") no-repeat center center fixed;
+  filter:blur(2.5px);
+  position: fixed;
+  z-index: -1;
 }
 
 header {
     width: 100%;
+    display: flex;
+    max-height: 67px;
 }
 
 
 #logo {
-  height: 125px;
-  padding: 20px;
+  height: 67px;
+  padding: 0px 20px 0px 20px;
   margin: auto;
   display: block;
 }
@@ -46,20 +60,9 @@ Navigation bar
 ***/
 
 .navbar {
-  display: block;
   margin: 0 auto;
   width: 85vw;
-  padding-top: 10px;
-  margin: 0 auto;
 }
-
-.nav-line {
-  display: block;
-  height: 3px;
-  width: 100%;
-  background-color: rgba(0,0,0,.4)
-}
-
 
 
 .menuButton {
@@ -76,6 +79,7 @@ Navigation bar
 
 .nav-list {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,7 +94,8 @@ Navigation bar
 
 .nav-item {
   background-color: #e8f1f2;
-  margin: 5px 0;
+  margin: 0;
+  height: 100%;
   color: rgba(0,0,0,.1);
   width: 100%;
 }
@@ -99,8 +104,8 @@ Navigation bar
   color: rgba(0,0,0,.5);
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
-  padding: 10px 0;
   width: 100%;
+  line-height: inherit;
   display: inline-block;
   white-space: nowrap;
 }
@@ -129,13 +134,13 @@ Front Page
   font-size: 60px;
   font-family: 'Roboto', sans-serif;
   color: #2f2e2e;
-  text-shadow: #f4f4f4 0 0 5px;
+  text-shadow: 	#ffffff  0 0 11px;
 }
 
 #jesus {
   color: #f0efef;
   -webkit-text-stroke: 1px rgba(0,0,0,.1);
-  text-shadow: rgba(255,157,0,.7) 0 0 5px;
+  text-shadow: rgba(255,157,0,.7) 0 0 11px;
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -174,9 +179,10 @@ Front Page
 Basic Section Styling
 *****/
 .color-back {
-  height: 800px;
+  min-height: 800px;
   font-size: 35px;
   color: #001a23;
+  background-color: #f9f2ec;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -554,9 +560,11 @@ MEDIA QUERIES
   ***/
 
   header {
-    width: 98vw;
+    width: 100%;
     max-width: 3000px;
     margin: auto;
+    background-color: black;
+    justify-content: space-between;
   }
   .menuButton {
     display: inline-block;
@@ -571,8 +579,7 @@ MEDIA QUERIES
   }
 
   #logo {
-    max-height: 100px;
-    padding: 20px;
+    max-height: 80px;
     display: inline-block;
     float: left;
   }
@@ -581,9 +588,7 @@ MEDIA QUERIES
   ***/
 
   .navbar {
-    display: block;
     width: 95vw;
-    position: absolute;
     margin-top: 125px;
     padding-left: 1.5vw;
   }
@@ -597,22 +602,25 @@ MEDIA QUERIES
 
   .nav-list {
     flex-direction: row;
-    margin: 0 0 0 -65px;
+    margin: 0 0 0 -5px;
   }
 
   .nav-item {
     width: 15%;
-    padding: 10px 0;
-    color: rgba(0,0,0,.1);
     background-color: transparent;
+    text-align: center;
+  }
+
+  .nav-item:hover{
+    background-color: gray;
   }
 
 
   .nav-item a {
-    color: rgba(0,0,0,.5);
+    color: white;
     font-family: 'Roboto', sans-serif;
-    padding: 0 5px;
-    width: 110%;
+    padding: 23px 0 23px 0;
+    width: 100%;
     white-space: nowrap;
     text-align: center;
   }
@@ -623,7 +631,7 @@ MEDIA QUERIES
 
   .welcomeText{
     flex-direction: row;
-    margin-top: 125px;
+
     }
 
     .welcome {
@@ -795,13 +803,8 @@ MEDIA QUERIES
 
   .navbar {
     width: calc(100% - 389px);
-    display: inline-block;
-    padding-top: 63px;
-    position: absolute;
     padding-left: 0;
     margin-top: 0;
-    left: 50%;
-    margin-left: calc(-1 *((100% - 389px) / 2));
     }
 
   .nav-item a {
@@ -810,6 +813,7 @@ MEDIA QUERIES
 
   .nav-item {
     width: 18%;
+    height: 100%;
   }
 
   /****
