@@ -1,7 +1,9 @@
-// Navbar toggle hide and show
- $(".menuButton").click(function(){
-   $(".navbar").fadeToggle();
- });
+//Menu button reveal drop down
+$(".menuButton").click(function() {
+  $(".navbar").fadeToggle();
+})
+
+
 
 $('#newButton').click(function() {
   $overlay.append('<iframe class="newVid overlayContent" src="https://www.youtube.com/embed/Ex8Q1WWh2jo?ecver=1" frameborder="0" allowfullscreen></iframe>');
