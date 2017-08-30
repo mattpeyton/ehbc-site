@@ -1,7 +1,23 @@
 //Menu button reveal drop down
+var $navbar = $(".navbar");
+var resizeCheck;
+$(window).on('resize', function (e) {
+    clearTimeout(resizeCheck);
+    resizeCheck = setTimeout(function () {
+        if ($(window).width() > 630) {
+            $navbar.show();
+        } else {
+            $navbar.hide();
+        }
+    }, 250);
+});
+
+
+
 $(".menuButton").click(function() {
-  $(".navbar").fadeToggle();
+  $navbar.toggle();
 })
+
 
 
 
