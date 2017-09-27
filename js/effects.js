@@ -20,7 +20,7 @@ $(".menuButton").click(function() {
 
 
 
-
+/*
 $('#newButton').click(function() {
   $overlay.append('<iframe class="newVid overlayContent" src="https://www.youtube.com/embed/Ex8Q1WWh2jo?ecver=1" frameborder="0" allowfullscreen></iframe>');
   $overlay.show();
@@ -31,9 +31,10 @@ $('#newButton').click(function() {
     $(".overlayContent").remove();
   });
 });
+*/
 
 
-//Newsletter sign up pop up window
+/*Newsletter sign up pop up window
 var $overlay = $('<div id="overlay"></div>');
 var $modWindow = $('<div class="overlayContent" id="modWindow"></div>');
 var $subForm = $('#subDiv');
@@ -100,7 +101,7 @@ $("#nwsltrButton").click(function(){
     console.log(subData);
   });
  });
-
+*/
 
 //FAQ hide and show answers
 $(".FAnswer").hide();
@@ -108,3 +109,40 @@ $(".FAnswer").hide();
 $(".FAQuestion").click(function(){
   $(this).next().slideToggle();
 });
+
+//Return to top button
+var $topCut = $('#top-cut');
+var $topCutButton = $('#top-cut-button');
+
+window.onscroll = function() {showCutButton()};
+
+function showCutButton() {
+  if(document.body.scrollTop > 50 ||
+  document.documentElement.scrollTop > 50) {
+    if($(window).width() > 849) {
+    $topCutButton.show();
+    $topCut.hide()
+  } else if ($(window).width() < 849) {
+    $topCutButton.hide();
+    $topCut.show();
+    }
+  }
+
+    else {
+      $topCutButton.hide();
+      $topCut.hide();
+    }
+  }
+
+
+$topCut.click(cutToTop);
+
+function cutToTop() {
+  console.log("CUT TO TOP")
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+/*
+Make another element for 840+ width
+Apply the same topcut rules to it
+Make a resize check*/

@@ -1,6 +1,7 @@
 
 
 html, body {
+  height:100%;
   margin: 0;
   padding: 0;
 }
@@ -16,6 +17,8 @@ a {
 body {
   background-color: #e8f1f2;
   width: 100%;
+  height: 100%;
+
 }
 
 /****
@@ -298,7 +301,7 @@ Content layout
   min-height: 100%;
   margin: 0 auto;
   z-index: 3;
-  position: relative;
+  /*position: relative;*/
 }
 
 .color-container {
@@ -347,13 +350,30 @@ Service Times
   width: 85%;
 }
 
-.top-cut {
-  text-align: right;
-  position: absolute;
-  width: 80%;
+#top-cut,
+#top-cut-button {
+  display: none;
+  position: fixed;
+  z-index: 101;
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+
+#top-cut {
   bottom: 0;
-  height: 20px;
-  margin: 30px 0 30px 0 ;
+  font-size: 23px;
+  width: 100%;
+}
+
+#top-cut-button {
+  bottom: 20px;
+  width: 75px;
+  right: 10px;
+  font-size: 20px;
 }
 
 
@@ -375,6 +395,7 @@ Service Times
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 72px;
 }
 
 .info-block h3 {
@@ -387,8 +408,9 @@ Service Times
   color: #001a23;
 }
 
-#worship-block {
-
+#worship-block p,
+#bible-study-block p {
+  font-size: .9em;
 }
 
 #bible-study-block {
@@ -422,7 +444,7 @@ Staff
 
 
 .staff-photo {
-  width:100%;
+  width:90%;
   margin: 0 auto;
 }
 
@@ -439,9 +461,9 @@ Staff
 .staff-photo img {
   display: block;
   margin: auto;
-  max-height: 70vh;
+  max-height: 50vh;
   max-width: 300px;
-  min-width: 200px;
+  min-width: 100px;
   border-radius: 15px;
 
 }
@@ -498,13 +520,15 @@ Footer
 .footer {
   background-color: #001a23;
   color: #e8f1f2;
-  position: absolute;
   width: 100%;
+  display: block;
   text-align: center;
+  z-index: 600;
 }
 
 .footer p {
-  padding-top: 2em;
+  margin:0;
+  padding: 2em;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -598,10 +622,34 @@ Newsletter sign up modal
 Calendar
 *******/
 
-.calendar-container {
-  height: 400px;
-  width: 80vw;
+.calendar-box {
+  margin: 0 auto;
+  margin-top: 70px;
+  display: flex;
+  min-height: 80vh;
+  width: 90%;
+
 }
+
+.calendar-container {
+  position: relative;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom:110%;
+  margin-bottom: 10px;
+}
+
+.calendar-container iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+}
+
+
 
 
 /****
@@ -769,6 +817,10 @@ and (orientation: landscape){
     .FAQuestion:hover {
       font-size: 1.03em;
     }
+
+    .calendar-container {
+      padding-bottom: 90%;
+    }
 }
 
 
@@ -880,11 +932,22 @@ and (orientation: landscape){
     margin: 0 0 .5em 0;
   }
 
+  #top-cut {
+    display: inline-block;
+  }
+
   /****
   Footer
   *****/
   .footer {
     text-align: left;
+  }
+
+  /*****
+  EVENTS PAGE
+  *****/
+  .calendar-container {
+    padding-bottom: 70%;
   }
 
 @media screen and (min-width: 1240px) {
@@ -941,6 +1004,10 @@ and (orientation: landscape){
 
   .newVid {
     margin: 200px auto;
+  }
+
+  .calendar-container {
+    padding-bottom: 40%;
   }
 
 }

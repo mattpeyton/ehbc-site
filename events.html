@@ -4,6 +4,7 @@
 
 <head>
   <meta content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Eastern Heights Baptist Church - Jeffersonville, IN</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css"/>
@@ -16,27 +17,35 @@
 </head>
 <body>
   <!-- Landing/top section -->
-  <div class="landing" id="landing">
     <header>
-      <a href="index.html"><img src="img/churchlogoreverse.jpg" id="logo"></a>
+      <div id="logo">
+        <a href="index.html"><img src="img/churchlogoreverse.jpg" id="logoImage"></a>
+      </div>
+      <div class="menuButtonContainer">
+        <div class="menuButton">
+          <p>
+            menu
+          </p>
+        </div>
+      </div>
       <div class="navbar">
         <ul class="nav-list">
-          <li class="nav-item" ><a href="index.html#beliefs">Beliefs</a></li>
-          <li class="nav-item" ><a href="index.html#services">Service Times</a></li>
-          <li class="nav-item" ><a href="index.html#staff">Staff</a></li>
-          <li class="nav-item" ><a href="index.html#location">Location</a></li>
-          <li class="nav-item" ><a href="index.html#members">Member FAQ</a></li>
+          <li class="nav-item"><a href="index.html#beliefs">Beliefs</a></li>
+          <li class="nav-item"><a href="index.html#services">Service Times</a></li>
+          <li class="nav-item"><a href="index.html#staff">Staff</a></li>
+          <li class="nav-item"><a href="index.html#location">Location</a></li>
+          <li class="nav-item"><a href="index.html#members">Member FAQ</a></li>
           <li class="nav-item" ><a href="events.html">Events</a></li>
         </ul>
       </div>
     </header>
-    <!-- Navgivation -->
-    <div class="welcome">
+    <div class="calendar-box">
       <div class="calendar-container">
-        <iframe src="https://calendar.google.com/calendar/embed?src=et0cpcf8aeo91a0cj4f54bvncg%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        <iframe src="https://calendar.google.com/calendar/embed?src=et0cpcf8aeo91a0cj4f54bvncg%40group.calendar.google.com&ctz=America/New_York" allowFullScreen></iframe>
       </div>
     </div>
-  </div>
+
+    <!-- Navgivation -->
 
   <!-- Footer Section -->
   <div class="footer">
