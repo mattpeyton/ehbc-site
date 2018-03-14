@@ -321,15 +321,48 @@ Content layout
   overflow: auto;
 }
 
+/***
+Current Spotlight
+***/
 
+.event-blocks-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
+.event-block {
+  width: 85%;
+  background-color: #f9f2ec;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px 10px 50px 10px;
+}
+
+#current {
+  background-color: #ACD1E9;
+}
+
+.event-date {
+  font-style: italic;
+  margin-bottom: 35px;
+}
+
+.event-block h4 {
+  margin-bottom: 20px;
+}
 
 /*****
 Beliefs
 *****/
 
-.content-block {
+.lock {
   width: 85%;
+  border-color: red;
+  border-width: 3px;
+  border-style: solid;
 }
 
 .belief-block {
@@ -448,7 +481,7 @@ Staff
   margin: 0 auto;
 }
 
-.staff-bio h3 {
+.staff-bio h3, p {
   text-align: center;
 }
 
@@ -894,6 +927,7 @@ and (orientation: landscape){
     align-items: flex-start;
     margin-bottom:50px;
   }
+
 
   /****
   Service Times
